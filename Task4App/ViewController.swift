@@ -13,11 +13,15 @@ class ViewController: UIViewController {
 
     @IBAction private func countUpButton(_ sender: Any) {
         currentNumber += 1
-        countUpLabel.text = String(currentNumber)
+        updateCountUpLabel()
     }
 
     @IBAction private func clearButton(_ sender: Any) {
         currentNumber = 0
+        updateCountUpLabel()
+    }
+
+    private func updateCountUpLabel() {
         countUpLabel.text = String(currentNumber)
     }
 }
